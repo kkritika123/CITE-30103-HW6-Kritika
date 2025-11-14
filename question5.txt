@@ -1,0 +1,6 @@
+The bug is in the scanf statement. The variable n is missing the & (address-of operator). scanf needs the memory address of the variable, not the variable itself.
+
+Error type: Runtime error. The program compiles, but it will crash or behave incorrectly when scanf tries to write to an invalid location.
+
+Corrected code uses: scanf("%d", &n);
+
