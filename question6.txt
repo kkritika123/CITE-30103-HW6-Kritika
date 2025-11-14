@@ -1,0 +1,19 @@
+There are three identifier (variable name) errors:
+
+1. int 1value = 10;
+   Error: A variable name cannot start with a number.
+   Fix: int value1 = 10;
+
+2. float avg-rate = 12.5;
+   Error: A variable name cannot have a minus sign (-). Only letters, numbers, and underscores are allowed.
+   Fix: float avg_rate = 12.5;
+
+3. char Class = 'A';
+   Error: Variable names should not look like keywords or built-in names. Using "Class" can be confusing.
+   Fix: char classGrade = 'A';
+
+Rules:
+- Variable names cannot start with numbers.
+- They cannot contain symbols like -.
+- Only letters, numbers, and underscores are allowed.
+
