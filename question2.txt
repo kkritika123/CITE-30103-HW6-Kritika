@@ -1,0 +1,39 @@
+Steps how C program moves from source code to execution.
+1. Preprocessing
+   - The preprocessor handles lines that start with #, like #include and #define.
+     It copies code from header files (like stdio.h) into your program and replaces macros.
+   - Example error:
+     If you write  #include <stdoi.h>  (spelling mistake),
+     the preprocessor cannot find this file and you get an error like:
+     "fatal error: stdoi.h: No such file or directory".
+
+2. Compilation
+   - The compiler takes the preprocessed C code and checks the syntax and types.
+     It then turns it into assembly code.
+   - Example error:
+     If you forget a semicolon, like:
+       int x = 10
+     the compiler may show:
+       "error: expected ‘;’ before ‘return’".
+
+3. Assembly
+   - The assembler turns the assembly code into machine code (an object file, such as .o).
+   - Example error:
+     Normally the compiler makes valid assembly, but if something is wrong,
+     the assembler could say there is an "invalid instruction" or "syntax error"
+     in the assembly file.
+
+4. Linking
+   - The linker combines your object file(s) with libraries (for example, the C standard
+     library that has printf, scanf, etc.) to create one final executable program.
+   - Example error:
+     If you call a function but there is no definition for it when linking,
+     you might see:
+       "undefined reference to `myFunction`".
+
+5. Loading (and execution)
+   - The operating system loads the executable from disk into memory and then starts it.
+   - Example error:
+     If the file is missing or you do not have permission, you may see:
+       "No such file or directory" or "Permission denied" when trying to run it.
+
