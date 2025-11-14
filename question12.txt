@@ -1,0 +1,14 @@
+The developer expected res = 11, but the expression a + b << 1 does not work like that.
+The shift operator (<<) has higher precedence than +. This means the program does:
+b << 1 first, then adds a.
+So it becomes: res = a + (b << 1)
+b << 1 is 3 * 2 = 6, so result becomes 5 + 6 = 11.
+
+Correction 1 (use parentheses):
+res = (a + b) << 1;   // (5 + 3) << 1 = 8 << 1 = 16
+
+Correction 2 (use normal arithmetic instead of shift):
+res = (a + b) * 2;   // 8 * 2 = 16
+
+Both corrections give the intended doubling of (a + b).
+
