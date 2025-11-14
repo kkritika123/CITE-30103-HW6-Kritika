@@ -1,0 +1,6 @@
+globalVar is a global variable because it is declared outside main(). It can be used anywhere in the program.
+
+localVar is a local variable because it is declared inside main(). It can only be used inside main().
+
+Global variables have program-wide scope. Local variables only exist inside the function where they are declared.
+
