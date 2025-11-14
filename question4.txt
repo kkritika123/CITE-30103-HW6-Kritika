@@ -1,0 +1,10 @@
+The bug happens because (a + b) / 2 uses integer division. Since a and b are integers, the result is also treated as an integer before being stored in a float. This causes the average to be incorrect.
+
+Error type: Logical error, because the program runs but produces the wrong result.
+
+Fix: Use 2.0 instead of 2, or cast one value to float. For example:
+float avg = (a + b) / 2.0;
+
+Correct output:
+Average = 7.50
+
